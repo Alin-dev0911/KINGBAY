@@ -524,7 +524,7 @@ body {
 }
 
 .story-maps {
-  margin-top: -30px;
+  margin-top: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 70px;
