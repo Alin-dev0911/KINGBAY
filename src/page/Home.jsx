@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
@@ -11,6 +11,7 @@ export default function Home() {
 	const bgRef = useRef(null);
 	const titleRef = useRef(null);
 	const gateLightRef = useRef(null);
+	const [menuOpen, setMenuOpen] = useState(false);
 
 	useEffect(() => {
 		const lenis = new Lenis({
@@ -67,29 +68,34 @@ export default function Home() {
 
 	return (
 		<main className="kingbay-page">
-			<nav className="kingbay-nav">
-				<div className="nav-logo">
-					<img src="/logo.svg" alt="KingBay Logo" />
-				</div>
-
-				<div className="nav-menu">
-					<a href="#home">Trang chủ</a>
-					<a href="#story">Về chúng tôi</a>
-					<a href="#blog">Blog</a>
-					<a href="#contact">Liên hệ</a>
-				</div>
+			<header className="navbar">
+				<a className="nav-logo" href="#home">
+					<img src="logo.svg" alt="KINGBAY" />
+				</a>
 
 				<button
-					className="nav-btn"
-					onClick={() => {
-						document.getElementById("story").scrollIntoView({
-							behavior: "smooth",
-						});
-					}}
+					type="button"
+					className={`menu-btn ${menuOpen ? "active" : ""}`}
+					onClick={() => setMenuOpen((prev) => !prev)}
 				>
-					Khám phá
+					☰
 				</button>
-			</nav>
+
+				<nav className={`nav-menu ${menuOpen ? "open" : ""}`}>
+					<a onClick={() => setMenuOpen(false)} href="#story">
+						Câu chuyện
+					</a>
+					<a onClick={() => setMenuOpen(false)} href="#product">
+						Sản phẩm
+					</a>
+					<a onClick={() => setMenuOpen(false)} href="#collection">
+						Bộ sưu tập
+					</a>
+					<a onClick={() => setMenuOpen(false)} href="#contact">
+						Liên hệ
+					</a>
+				</nav>
+			</header>
 
 			<section id="home" ref={heroRef} className="kingbay-hero">
 				<img ref={bgRef} className="hero-bg" src="/assets/kingbay-home-bg.png" alt="Kingbay Home" />
@@ -376,6 +382,41 @@ export default function Home() {
 					</form>
 				</div>
 			</section>
+			<footer className="site-footer" id="contact">
+				<div className="footer-top">
+					<div className="footer-left">
+						<div className="footer-logo">
+							<img src="/logo.svg" alt="KINGBAY" />
+						</div>
+
+						<p className="footer-desc">
+							Lãnh địa trí tuệ — nơi người chơi làm chủ cuộc chiến của riêng mình.
+						</p>
+
+						<div className="footer-info">
+							<p>Địa chỉ: 119, Lê Trọng Tấn, Tân Sơn Nhì, TP. Hồ Chí Minh</p>
+							<p>Điện thoại: 0384799202</p>
+							<p>Email: kingbay@gmail.com</p>
+						</div>
+					</div>
+
+					<div className="footer-right">
+						<p className="footer-label">Danh mục</p>
+
+						<nav className="footer-links">
+							<a href="#story">Câu chuyện</a>
+							<a href="#product">Sản phẩm</a>
+							<a href="#collection">Bộ sưu tập</a>
+							<a href="#contact">Liên hệ</a>
+						</nav>
+					</div>
+				</div>
+
+				<div className="footer-bottom">
+					<span>© 2026 KINGBAY</span>
+					<span>Designed for KingBay</span>
+				</div>
+			</footer>
 		</main>
 	);
 }
