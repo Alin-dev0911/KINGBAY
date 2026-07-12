@@ -74,13 +74,26 @@ img {
 
 	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
+	/* Xóa background và backdrop-filter cũ */
+	background: transparent;
+}
+
+.site-navbar::before {
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+
 	background: linear-gradient(
 		180deg,
 		rgba(3, 6, 6, 0.94),
 		rgba(3, 6, 6, 0.38)
 	);
 
+	-webkit-backdrop-filter: blur(16px);
 	backdrop-filter: blur(16px);
+
+	content: "";
+	pointer-events: none;
 }
 
 .site-logo {
@@ -298,7 +311,11 @@ img {
 
 	.site-navigation {
 		position: fixed;
-		inset: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
 		z-index: 1001;
 
 		display: flex;
@@ -306,7 +323,15 @@ img {
 		align-items: center;
 		justify-content: center;
 
-		gap: 26px;
+		width: 100%;
+		height: 100vh;
+		height: 100dvh;
+		padding: 100px 24px 40px;
+		gap: 0;
+
+		overflow-x: hidden;
+		overflow-y: auto;
+		overscroll-behavior: contain;
 
 		background:
 			radial-gradient(
@@ -319,12 +344,13 @@ img {
 				rgba(17, 77, 73, 0.32),
 				transparent 35%
 			),
-			rgba(2, 5, 5, 0.98);
+			#020505;
 
 		opacity: 0;
 		visibility: hidden;
+		pointer-events: none;
 
-		transform: translateY(-20px);
+		transform: translateY(-16px);
 
 		transition:
 			opacity 0.35s ease,
@@ -335,15 +361,43 @@ img {
 	.site-navigation.open {
 		opacity: 1;
 		visibility: visible;
+		pointer-events: auto;
 		transform: translateY(0);
 	}
 
 	.site-navigation a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: min(100%, 560px);
+		min-height: 84px;
+		padding: 18px 12px;
+
+		border-bottom: 1px solid rgba(244, 218, 191, 0.12);
+
+		color: rgba(244, 218, 191, 0.78);
+
 		font-family: "Montserrat", sans-serif;
-		font-size: clamp(28px, 5vw, 44px);
+		font-size: clamp(26px, 5vw, 42px);
 		font-weight: 400;
 		letter-spacing: 0;
+		line-height: 1.2;
+		text-align: center;
 		text-transform: none;
+	}
+
+	.site-navigation a:first-child {
+		border-top: 1px solid rgba(244, 218, 191, 0.12);
+	}
+
+	.site-navigation a::after {
+		display: none;
+	}
+
+	.site-navigation a:hover,
+	.site-navigation a.active {
+		color: var(--kingbay-gold);
 	}
 
 	.site-footer-main {
@@ -354,11 +408,20 @@ img {
 		grid-column: 1 / -1;
 	}
 }
-
 @media (max-width: 700px) {
 	.site-navbar {
 		height: 72px;
 		padding: 0 20px;
+	}
+
+	.site-navigation {
+		justify-content: flex-start;
+		padding: 100px 20px 36px;
+	}
+
+	.site-navigation a {
+		min-height: 72px;
+		font-size: clamp(25px, 8vw, 34px);
 	}
 
 	.site-logo {
