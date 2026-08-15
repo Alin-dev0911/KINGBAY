@@ -5,6 +5,8 @@ import ScrollToTop from "./components/ScrollToTop.jsx";
 
 import Home from "./page/Home.jsx";
 import Story from "./page/Story.jsx";
+import Products from "./page/Products.jsx";
+import World from "./page/World";
 
 export default function App() {
 	return (
@@ -15,6 +17,8 @@ export default function App() {
 				<Route element={<MainLayout />}>
 					<Route path="/" element={<Home />} />
 					<Route path="/story" element={<Story />} />
+					<Route path="/product" element={<Products />} />
+					<Route path="/world" element={<World />} />
 
 					<Route path="*" element={<Navigate to="/" replace />} />
 				</Route>

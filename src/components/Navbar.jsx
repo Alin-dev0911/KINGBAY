@@ -32,11 +32,11 @@ export default function Navbar() {
 		},
 		{
 			label: "Sản phẩm",
-			to: "/#product",
+			to: "/product",
 		},
 		{
 			label: "Thế giới",
-			to: "/#world",
+			to: "/world",
 		},
 		{
 			label: "Tin tức",
