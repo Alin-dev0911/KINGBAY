@@ -2,7 +2,7 @@ import "../styles/World.css";
 
 import worldHero from "../assets/world-hero.jpg";
 import worldCards from "../assets/world-cards.png";
-import worldChessRoom from "../assets/world-chess-room.jpg";
+import worldChessRoom from "../assets/world-chess-room.png";
 import worldWindow from "../assets/world-window.jpg";
 
 function World() {

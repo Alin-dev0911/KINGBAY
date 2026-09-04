@@ -465,7 +465,313 @@ font-family: "Montserrat", sans-serif;
 	font-size: 8px;
 	letter-spacing: 2px;
 }
+/* =========================
+   TWO KINGDOMS
+========================= */
 
+.kingdom-section {
+	background: #050706;
+	padding: 110px 6vw 130px;
+}
+
+.kingdom-heading {
+	max-width: 1380px;
+	margin: 0 auto 55px;
+}
+
+.kingdom-heading .section-label {
+	display: inline-block;
+	margin-bottom: 18px;
+
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+
+	color: #b39458;
+}
+
+.kingdom-heading h2 {
+	margin: 0;
+
+	font-size: clamp(44px, 5vw, 76px);
+	line-height: 0.95;
+	letter-spacing: -0.05em;
+
+	color: #f3eee5;
+}
+
+.kingdom-heading h2 span {
+	color: rgba(255, 255, 255, 0.35);
+}
+
+
+/* GRID */
+
+.kingdom-grid {
+	max-width: 1380px;
+	margin: 0 auto;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	gap: 16px;
+}
+
+
+/* CARD */
+
+.kingdom-card {
+	position: relative;
+
+	height: 380px;
+
+	border-radius: 18px;
+	overflow: hidden;
+
+	background: #111;
+
+	isolation: isolate;
+
+	cursor: pointer;
+
+	transition:
+		transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+		box-shadow 0.55s ease;
+}
+
+.kingdom-card:hover {
+	transform: translateY(-7px);
+}
+
+
+/* IMAGE */
+
+.kingdom-card-image {
+	position: absolute;
+	inset: 0;
+
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+	object-position: center;
+
+	z-index: -3;
+
+	transform: scale(1.015);
+
+	transition:
+		transform 1s cubic-bezier(0.22, 1, 0.36, 1),
+		filter 0.6s ease;
+}
+
+.kingdom-card:hover .kingdom-card-image {
+	transform: scale(1.07);
+}
+
+
+/* OVERLAY */
+
+.kingdom-card-overlay {
+	position: absolute;
+	inset: 0;
+
+	z-index: -2;
+}
+
+
+/* RED KINGDOM */
+
+.kingdom-red .kingdom-card-overlay {
+	background:
+		linear-gradient(
+			90deg,
+			rgba(48, 6, 8, 0.98) 0%,
+			rgba(68, 11, 14, 0.93) 32%,
+			rgba(72, 14, 15, 0.72) 55%,
+			rgba(36, 7, 8, 0.38) 100%
+		),
+		linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.05) 0%,
+			rgba(0, 0, 0, 0.45) 100%
+		);
+}
+
+.kingdom-red:hover {
+	box-shadow: 0 25px 70px rgba(117, 24, 31, 0.24);
+}
+
+
+/* GREEN KINGDOM */
+
+.kingdom-green .kingdom-card-overlay {
+	background:
+		linear-gradient(
+			90deg,
+			rgba(2, 36, 31, 0.98) 0%,
+			rgba(4, 50, 43, 0.92) 33%,
+			rgba(4, 52, 43, 0.68) 58%,
+			rgba(2, 24, 21, 0.38) 100%
+		),
+		linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.04) 0%,
+			rgba(0, 0, 0, 0.4) 100%
+		);
+}
+
+.kingdom-green:hover {
+	box-shadow: 0 25px 70px rgba(6, 81, 67, 0.22);
+}
+
+
+/* CONTENT */
+
+.kingdom-card-content {
+	position: relative;
+	z-index: 2;
+
+	width: 48%;
+	height: 100%;
+
+	padding: 48px 0 38px 46px;
+
+	display: flex;
+	flex-direction: column;
+
+	align-items: flex-start;
+}
+
+.kingdom-name-small {
+	font-size: 9px;
+	font-weight: 600;
+
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+
+	color: #c4a15e;
+
+	margin-bottom: 12px;
+}
+
+.kingdom-card h3 {
+	margin: 0;
+
+	font-size: clamp(38px, 3.4vw, 58px);
+	line-height: 0.9;
+
+	letter-spacing: -0.05em;
+	font-weight: 600;
+
+	color: #f4efe7;
+}
+
+.kingdom-card p {
+	max-width: 250px;
+
+	margin: 20px 0 0;
+
+	font-size: 12px;
+	line-height: 1.6;
+
+	color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* BUTTON */
+
+.kingdom-card button {
+	margin-top: auto;
+
+	padding: 0;
+
+	background: none;
+	border: none;
+
+	color: rgba(255, 255, 255, 0.74);
+
+	font-size: 11px;
+	font-family: inherit;
+
+	cursor: pointer;
+
+	display: flex;
+	align-items: center;
+	gap: 8px;
+
+	transition:
+		color 0.3s ease,
+		transform 0.3s ease;
+}
+
+.kingdom-card button span {
+	font-size: 13px;
+
+	transition: transform 0.3s ease;
+}
+
+.kingdom-card:hover button {
+	color: #fff;
+}
+
+.kingdom-card:hover button span {
+	transform: translate(4px, -4px);
+}
+
+
+/* BORDER MỜ */
+
+.kingdom-card::after {
+	content: "";
+
+	position: absolute;
+	inset: 0;
+
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	border-radius: inherit;
+
+	pointer-events: none;
+
+	z-index: 5;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+	.kingdom-section {
+		padding: 80px 24px;
+	}
+
+	.kingdom-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.kingdom-card {
+		height: 360px;
+	}
+
+	.kingdom-card-content {
+		width: 60%;
+	}
+}
+
+@media (max-width: 560px) {
+	.kingdom-card {
+		height: 310px;
+		border-radius: 14px;
+	}
+
+	.kingdom-card-content {
+		width: 72%;
+		padding: 34px 24px 28px;
+	}
+
+	.kingdom-card h3 {
+		font-size: 38px;
+	}
+}
 /* =========================================
    KINGDOMS
 ========================================= */

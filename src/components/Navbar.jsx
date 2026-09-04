@@ -40,11 +40,11 @@ export default function Navbar() {
 		},
 		{
 			label: "Tin tức",
-			to: "/#news",
+			to: "/news",
 		},
 		{
 			label: "Liên hệ",
-			to: "/#contact",
+			to: "/contact",
 		},
 	];
 

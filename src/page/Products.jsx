@@ -1,8 +1,10 @@
 import "../styles/Products.css";
 import heroImage from "../assets/wonderland-hero.png";
-import img1 from "../assets/skill-card.png";
-import img2 from "../assets/material-card.png";
-import img3 from "../assets/kingbay-board.png";
+import img1 from "../assets/kingbay-red-characters.png";
+import img2 from "../assets/kingbay-green-characters.png";
+import img4 from "../assets/img9.png";
+import img5 from "../assets/img10.png";
+import img6 from "../assets/img11.png";
 
 function Products() {
 	return (
@@ -114,9 +116,11 @@ function Products() {
 				<div className="kingdom-grid">
 					{/* RED */}
 					<div className="kingdom-card kingdom-red">
-						<div className="kingdom-card-content">
-							<span className="kingdom-index">01</span>
+						<img src={img1} alt="Trái Tim Hoàng Gia" className="kingdom-card-image" />
 
+						<div className="kingdom-card-overlay" />
+
+						<div className="kingdom-card-content">
 							<span className="kingdom-name-small">VƯƠNG QUỐC ĐỎ</span>
 
 							<h3>
@@ -125,22 +129,22 @@ function Products() {
 								Hoàng Gia
 							</h3>
 
-							<p>Quyền lực, mạnh mẽ và trực diện. Mỗi quân cờ mang tinh thần của Vương quốc Đỏ.</p>
+							<p>Quyền lực, mạnh mẽ và trực diện.</p>
 
 							<button>
 								Khám phá phe đỏ
 								<span>↗</span>
 							</button>
 						</div>
-
-						<div className="kingdom-symbol">♥</div>
 					</div>
 
 					{/* GREEN */}
 					<div className="kingdom-card kingdom-green">
-						<div className="kingdom-card-content">
-							<span className="kingdom-index">02</span>
+						<img src={img2} alt="Bí Ẩn Wonderland" className="kingdom-card-image" />
 
+						<div className="kingdom-card-overlay" />
+
+						<div className="kingdom-card-content">
 							<span className="kingdom-name-small">VƯƠNG QUỐC XANH</span>
 
 							<h3>
@@ -149,17 +153,13 @@ function Products() {
 								Wonderland
 							</h3>
 
-							<p>
-								Linh hoạt, khó đoán và đầy biến hóa. Phe Xanh tạo nên những nước đi bất ngờ trên bàn cờ.
-							</p>
+							<p>Linh hoạt, khó đoán và đầy biến hóa.</p>
 
 							<button>
 								Khám phá phe xanh
 								<span>↗</span>
 							</button>
 						</div>
-
-						<div className="kingdom-symbol">♛</div>
 					</div>
 				</div>
 			</section>
@@ -183,10 +183,10 @@ function Products() {
 						<span>01</span>
 
 						<div className="gameplay-image">
-							<img src={img1} alt="Thẻ kỹ năng" />
+							<img src={img4} alt="Thẻ chiến thuật" />
 						</div>
 
-						<h3>Thẻ kỹ năng</h3>
+						<h3>Thẻ chiến thuật mới</h3>
 
 						<p>Mỗi quân cờ có thể sở hữu khả năng chiến thuật riêng.</p>
 					</div>
@@ -195,10 +195,10 @@ function Products() {
 						<span>02</span>
 
 						<div className="gameplay-image">
-							<img src={img2} alt="Vật liệu" />
+							<img src={img5} alt="Vật liệu" />
 						</div>
 
-						<h3>Vật liệu</h3>
+						<h3>Ô Vật liệu</h3>
 
 						<p>Gương, kính, thép, ánh sáng và nhiều vật liệu thay đổi bàn đấu.</p>
 					</div>
@@ -207,10 +207,10 @@ function Products() {
 						<span>03</span>
 
 						<div className="gameplay-image">
-							<img src={img3} alt="Chiến thuật mới" />
+							<img src={img6} alt="Bàn cờ mới" />
 						</div>
 
-						<h3>Chiến thuật mới</h3>
+						<h3>Bàn cờ mới</h3>
 
 						<p>Mỗi trận đấu tạo ra một kịch bản hoàn toàn khác nhau.</p>
 					</div>

@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import storyHeroImage from "../assets/img7.png";
+import storyHeroImage from "../assets/img7.jpg";
 import chessImage from "../assets/img6.png";
-import wonderlandImage from "../assets/keyvissual final.png";
-import interiorImage from "../assets/img4.jpg";
-import experienceImage from "../assets/kingbay-home-bg.png";
+import wonderlandImage from "../assets/keyvissual final.jpg";
+import interiorImage from "../assets/img8.png";
+import experienceImage from "../assets/1.jpg";
 
 import "../styles/Story.css";
 

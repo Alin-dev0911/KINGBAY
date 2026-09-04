@@ -18,11 +18,12 @@ export default function Footer() {
 				<div className="site-footer-column">
 					<span>Khám phá</span>
 
-					<Link to="/#home">Trang chủ</Link>
+					<Link to="/home">Trang chủ</Link>
 					<Link to="/story">Câu chuyện</Link>
-					<Link to="/#product">Sản phẩm</Link>
-					<Link to="/#world">Thế giới KingBay</Link>
-					<Link to="/#news">Tin tức</Link>
+					<Link to="/product">Sản phẩm</Link>
+					<Link to="/world">Thế giới KingBay</Link>
+					<Link to="/news">Tin tức</Link>
+                    <Link to="/contact">Liên hệ</Link>
 				</div>
 
 				<div className="site-footer-column">

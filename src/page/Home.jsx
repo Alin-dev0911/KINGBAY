@@ -12,7 +12,7 @@ import eventImage from "../assets/img1.png";
 import mapInterior from "../assets/map-01.png";
 import mapCeiling from "../assets/map-02.png";
 import tranImage from "../assets/tran.png";
-import thaoImage from "../assets/thao.jpg";
+import thaoImage from "../assets/thao.png";
 import hoaiImage from "../assets/hoai.png";
 import quyenImage from "../assets/quyen.png";
 import benImage from "../assets/ben.png";
@@ -589,8 +589,13 @@ export default function Home() {
 						</p>
 
 						<div className="home-product-actions">
-							<a className="home-primary-button" href="#world">
-								Xem ngay
+							<a
+								className="home-primary-button"
+								href="https://co-vua-king-bay.vercel.app"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Chơi ngay
 							</a>
 
 							<a className="home-secondary-button" href="#experience">

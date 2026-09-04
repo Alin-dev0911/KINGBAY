@@ -757,7 +757,6 @@ img {
 .home-product-actions .home-primary-button,
 .home-product-actions .home-secondary-button {
 	min-height: 50px;
-	padding: 0 28px;
 
 	border-radius: 16px;
 
@@ -2211,21 +2210,6 @@ img {
 .home-experience-overlay {
 	position: absolute;
 	inset: 0;
-
-	background:
-		linear-gradient(
-			90deg,
-			rgba(2, 4, 4, 0.92) 0%,
-			rgba(2, 4, 4, 0.7) 26%,
-			rgba(2, 4, 4, 0.22) 55%,
-			rgba(2, 4, 4, 0.62) 100%
-		),
-		linear-gradient(
-			180deg,
-			rgba(2, 4, 4, 0.18) 0%,
-			rgba(2, 4, 4, 0.05) 46%,
-			rgba(2, 4, 4, 0.8) 100%
-		);
 }
 
 .home-experience-vignette {
