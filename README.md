@@ -1,28 +1,102 @@
-# KINGBAY V1
+KINGBAY
 
-Project React/Vite hoàn chỉnh cho trang Home KINGBAY.
+KINGBAY is a React/Vite web project inspired by the world of chess and Wonderland, developed as an interactive website with a strong visual identity and responsive layout.
 
-## Chạy project
+Features
 
-```bash
+Responsive web interface
+
+Multi-page website structure
+
+Custom visual components
+
+Chess-inspired user interface
+
+Story and product content
+
+Responsive layouts for different screen sizes
+
+Deployment-ready configuration with Vercel
+
+Tech Stack
+
+React
+
+JavaScript
+
+Vite
+
+HTML5
+
+CSS3
+
+Vercel
+
+Project Structure
+
+KINGBAY/
+├── public/
+│   └── logo.svg
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── page/
+│   ├── styles/
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── .gitignore
+├── README.md
+├── bun.lock
+├── index.html
+├── package.json
+└── vercel.json
+
+Installation
+
+Clone the repository:
+
+git clone <repository-url>
+
+Install dependencies:
+
 npm install
+
+Start the development server:
+
 npm run dev
-```
 
-Sau đó mở link Vite hiển thị trong Terminal, thường là:
+The application will normally run at:
 
-```bash
 http://localhost:5173
-```
 
-## Màu brand
+Brand Colors
 
-- King Red: `#7A1820`
-- Light Gold: `#F5DABE`
-- Dark Green: `#063B3C`
+Color
 
-## File chính
+HEX
 
-- `src/pages/Home.jsx`
-- `src/styles.css`
-- `public/assets/`
+King Red
+
+#7A1820
+
+Light Gold
+
+#F5DABE
+
+Dark Green
+
+#063B3C
+
+Live Demo
+
+Add your deployed website URL here.
+
+Example:
+
+https://kingbay.vercel.app
+
+Author
+
+Developed by ALin
